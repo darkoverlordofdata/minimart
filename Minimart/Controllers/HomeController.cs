@@ -6,11 +6,14 @@ using System.Web.Mvc;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using Minimart.Models;
 
 namespace Minimart.Controllers
 {
     public class HomeController : Controller
     {
+        private MinimartEntities storeDB = new MinimartEntities();
+
         public HomeController()
         {
 
@@ -26,6 +29,10 @@ namespace Minimart.Controllers
         {
             ViewBag.MenuHome = "active";
             ViewBag.Confirmation = confirm;
+            MM_GetBrand_Result brand = storeDB.MM_GetBrand(1).ElementAt(0);
+            ViewBag.BrandName = brand.name;
+
+
             return View();
 
         }
