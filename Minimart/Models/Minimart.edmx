@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Minimart.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <Function Name="MM_DelCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="orderId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MM_GetBrand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MM_GetCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="orderId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MM_GetOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MM_GetProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="brandId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MM_NewCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="orderIp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="MM_ShipTo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="order_id" Type="int" Mode="In" />
+          <Parameter Name="confirmation" Type="varchar" Mode="In" />
+          <Parameter Name="customer_name" Type="varchar" Mode="In" />
+          <Parameter Name="customer_email" Type="varchar" Mode="In" />
+          <Parameter Name="phone_number" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_name" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_address1" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_address2" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_city" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_country" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_state" Type="varchar" Mode="In" />
+          <Parameter Name="ship_to_zip" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="MM_Submit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="order_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MM_UpdateCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="orderId" Type="int" Mode="In" />
+          <Parameter Name="productId" Type="int" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="quantity" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="MinimartModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Minimart.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MinimartEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="MM_DelCart">
+            <Parameter Name="orderId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MM_GetBrand" ReturnType="Collection(Minimart.Model.MM_GetBrand_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MM_GetCart" ReturnType="Collection(Minimart.Model.MM_GetCart_Result)">
+            <Parameter Name="orderId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MM_GetOrder" ReturnType="Collection(Minimart.Model.MM_GetOrder_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MM_GetProducts" ReturnType="Collection(Minimart.Model.MM_GetProducts_Result)">
+            <Parameter Name="brandId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MM_NewCart" ReturnType="Collection(Decimal)">
+            <Parameter Name="orderIp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="MM_ShipTo">
+            <Parameter Name="order_id" Mode="In" Type="Int32" />
+            <Parameter Name="confirmation" Mode="In" Type="String" />
+            <Parameter Name="customer_name" Mode="In" Type="String" />
+            <Parameter Name="customer_email" Mode="In" Type="String" />
+            <Parameter Name="phone_number" Mode="In" Type="String" />
+            <Parameter Name="ship_to_name" Mode="In" Type="String" />
+            <Parameter Name="ship_to_address1" Mode="In" Type="String" />
+            <Parameter Name="ship_to_address2" Mode="In" Type="String" />
+            <Parameter Name="ship_to_city" Mode="In" Type="String" />
+            <Parameter Name="ship_to_country" Mode="In" Type="String" />
+            <Parameter Name="ship_to_state" Mode="In" Type="String" />
+            <Parameter Name="ship_to_zip" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="MM_Submit">
+            <Parameter Name="order_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MM_UpdateCart">
+            <Parameter Name="orderId" Mode="In" Type="Int32" />
+            <Parameter Name="productId" Mode="In" Type="Int32" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="quantity" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="MM_GetBrand_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="MM_GetCart_Result">
+          <Property Type="Int64" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="order_id" Nullable="false" />
+          <Property Type="Int32" Name="product_id" Nullable="false" />
+          <Property Type="String" Name="brand" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="size" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="upc" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="12" Scale="2" />
+          <Property Type="String" Name="servings" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="servingsize" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ingredients" Nullable="false" MaxLength="1024" />
+          <Property Type="String" Name="image" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="quantity" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="MM_GetOrder_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="order_guid" Nullable="false" MaxLength="36" />
+          <Property Type="String" Name="order_ip" Nullable="false" MaxLength="39" />
+          <Property Type="DateTime" Name="order_date" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="order_status" Nullable="false" />
+          <Property Type="String" Name="customer_name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="customer_email" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="phone_number" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ship_to_name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ship_to_address1" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ship_to_address2" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ship_to_city" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ship_to_country" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ship_to_state" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="ship_to_zip" Nullable="false" MaxLength="5" />
+        </ComplexType>
+        <ComplexType Name="MM_GetProducts_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="brand" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="size" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="upc" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="12" Scale="2" />
+          <Property Type="String" Name="ingredients" Nullable="false" MaxLength="1024" />
+          <Property Type="String" Name="servings" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="servingsize" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="image" Nullable="false" MaxLength="255" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MinimartModelStoreContainer" CdmEntityContainer="MinimartEntities" >
+          <FunctionImportMapping FunctionImportName="MM_DelCart" FunctionName="Minimart.Model.Store.MM_DelCart" />
+          <FunctionImportMapping FunctionImportName="MM_GetBrand" FunctionName="Minimart.Model.Store.MM_GetBrand">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Minimart.Model.MM_GetBrand_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MM_GetCart" FunctionName="Minimart.Model.Store.MM_GetCart">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Minimart.Model.MM_GetCart_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="upc" ColumnName="upc" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="servings" ColumnName="servings" />
+                <ScalarProperty Name="servingsize" ColumnName="servingsize" />
+                <ScalarProperty Name="ingredients" ColumnName="ingredients" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MM_GetOrder" FunctionName="Minimart.Model.Store.MM_GetOrder">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Minimart.Model.MM_GetOrder_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="order_guid" ColumnName="order_guid" />
+                <ScalarProperty Name="order_ip" ColumnName="order_ip" />
+                <ScalarProperty Name="order_date" ColumnName="order_date" />
+                <ScalarProperty Name="order_status" ColumnName="order_status" />
+                <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+                <ScalarProperty Name="customer_email" ColumnName="customer_email" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="ship_to_name" ColumnName="ship_to_name" />
+                <ScalarProperty Name="ship_to_address1" ColumnName="ship_to_address1" />
+                <ScalarProperty Name="ship_to_address2" ColumnName="ship_to_address2" />
+                <ScalarProperty Name="ship_to_city" ColumnName="ship_to_city" />
+                <ScalarProperty Name="ship_to_country" ColumnName="ship_to_country" />
+                <ScalarProperty Name="ship_to_state" ColumnName="ship_to_state" />
+                <ScalarProperty Name="ship_to_zip" ColumnName="ship_to_zip" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MM_GetProducts" FunctionName="Minimart.Model.Store.MM_GetProducts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Minimart.Model.MM_GetProducts_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="upc" ColumnName="upc" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="ingredients" ColumnName="ingredients" />
+                <ScalarProperty Name="servings" ColumnName="servings" />
+                <ScalarProperty Name="servingsize" ColumnName="servingsize" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MM_NewCart" FunctionName="Minimart.Model.Store.MM_NewCart" />
+          <FunctionImportMapping FunctionImportName="MM_ShipTo" FunctionName="Minimart.Model.Store.MM_ShipTo" />
+          <FunctionImportMapping FunctionImportName="MM_Submit" FunctionName="Minimart.Model.Store.MM_Submit" />
+          <FunctionImportMapping FunctionImportName="MM_UpdateCart" FunctionName="Minimart.Model.Store.MM_UpdateCart" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

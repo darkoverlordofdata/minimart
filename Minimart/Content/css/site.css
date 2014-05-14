@@ -1,0 +1,28 @@
+﻿body {
+    padding-top: 60px;
+    padding-left: 10px;
+}
+
+img.img-product {
+    height: 100px;
+}
+
+img.img-detail {
+    height: 300px;
+}
+
+img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+img.alignright {
+    float: right;
+    margin: 0 1em 1em 0;
+}
+
+.melody {
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+}
+

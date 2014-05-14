@@ -1,0 +1,12 @@
+﻿<div class="jumbotron">
+    <div class="container">
+        <h1 class="melody">go to the Mini-Mart...</h1>
+        @if (ViewBag.Confirmation != "")
+        {
+            <p>Your Order Confirmation is @ViewBag.Confirmation</p>
+        }
+        <hr>
+        <p><a class="btn btn-lg btn-success" href='@Url.Action("Index","Catalog")' role="button">Start Shopping</a></p>
+
+    </div>
+</div>

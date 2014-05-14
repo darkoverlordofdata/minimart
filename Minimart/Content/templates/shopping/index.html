@@ -1,0 +1,99 @@
+﻿<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Totals</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for row in cart %}
+        <tr>
+            <td><a data-toggle="modal" data-target="#row_{{ row.product_id }}">{{ row.name }}</a></td>
+            <td>{{ row.size }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.quantity }}</td>
+            <td><span class="pull-right">{{ row.price * quantity) }}</span></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4"><strong>Total</strong></td>
+            <td><span class="pull-right">$ {{ total }}</span></td>
+        </tr>
+    </tfoot>
+</table>
+
+{% for row in cart %}
+<div class="modal fade" id="row_{{ row.product_id }}" tabindex="-1" role="dialog" aria-labelledby="rowLabel{{ row.product_id }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="rowLabel{{ row.product_id }}">{{ row.name }}</h3>
+            </div>
+            <div class="modal-body">
+                <img src='/images/products/{{ row.image }}' class="alignright img-thumbnail img-detail" alt='{{ row.name }}' />
+
+                <dl>
+                    <dt>{{ row.brand }}</dt>
+                    <dd>{{ row.name }}, {{ row.size }}</dd>
+                    <dt>Serving</dt>
+                    <dd>{{ row.servingsize }}</dd>
+                    <dt>Per Container</dt>
+                    <dd>{{ row.servings }}</dd>
+                    <dt>Ingredients</dt>
+                    <dd>{{ row.ingredients }}</dd>
+                </dl>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-group input-group-sm update-cart">
+                            <select class="form-control" data-id="{{ row.product_id }}" data-price="{{ row.price }}">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit" data-dismiss="modal"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <p />
+                <div>
+                    <button class="btn btn-warning delete-cart" type="submit" data-dismiss="modal" data-id="{{ row.product_id }}" data-quantity="-{{ row.quantity }}"><span class=" glyphicon glyphicon-trash"></span> Remove</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
