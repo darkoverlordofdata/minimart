@@ -13,10 +13,14 @@ set sql connection string.
 	Server=208b96c3-27cd-435b-8096-a32b01717303.sqlserver.sequelizer.com;Database=db208b96c327cd435b8096a32b01717303;User ID=bltihrlqzvribkmh;Password=8PMY3SE7KHZ3eHvT8cf2uqsaT5yN7KXdPVmZnxjs5VRQWHJvC5u8sK6QvLf6tY8a;
 
 
-copy Minimart Web.template.config to Web.config
-copy Minimart.Tests App.template.config to App.config
+	First
 
-Then in both config files, replace the token $CONNECTION_STRING$ with the new value.
+		copy Minimart Web.template.config to Web.config
+		copy Minimart.Tests App.template.config to App.config
+
+	Then in both config files
+
+		replace the token $CONNECTION_STRING$ with the new value.
 
 
 ## License
