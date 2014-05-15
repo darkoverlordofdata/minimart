@@ -320,8 +320,7 @@
       <DependentUpon>Minimart.edmx</DependentUpon>
       <LastGenOutput>Minimart.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Catalog\Index.cshtml" />
-    <None Include="Views\Catalog\Index0.cshtml" />
+    <None Include="Views\Catalog\Index.cshtml" />
     <None Include="Views\Shopping\Checkout.cshtml" />
     <None Include="Views\Shopping\Index.cshtml" />
     <Content Include="Web.config" />
