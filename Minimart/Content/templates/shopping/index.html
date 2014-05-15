@@ -14,16 +14,16 @@
         <tr>
             <td><a data-toggle="modal" data-target="#row_{{ row.product_id }}">{{ row.name }}</a></td>
             <td>{{ row.size }}</td>
-            <td>{{ row.price }}</td>
+            <td>{{ row.price | decimal }}</td>
             <td>{{ row.quantity }}</td>
-            <td><span class="pull-right">{{ row.price * quantity) }}</span></td>
+            <td><span class="pull-right">{{ (row.price * quantity)  | decimal }}</span></td>
         </tr>
         {% endfor %}
     </tbody>
     <tfoot>
         <tr>
             <td colspan="4"><strong>Total</strong></td>
-            <td><span class="pull-right">$ {{ total }}</span></td>
+            <td><span class="pull-right">$ {{ total | decimal }}</span></td>
         </tr>
     </tfoot>
 </table>

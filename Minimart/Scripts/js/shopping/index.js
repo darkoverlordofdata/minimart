@@ -65,7 +65,14 @@ $(function () {
             });
         };
 
-
+    /**
+     * Register a decimal format filter
+     */
+    Filters = function(){};
+    Filters.decimal = function (input) {
+        return Number(input).toFixed(2);
+    }
+    Liquid.Template.registerFilter(Filters);
 
     $.get("/Content/templates/shopping/index.html", function (data) {
         template = Liquid.Template.parse(data);

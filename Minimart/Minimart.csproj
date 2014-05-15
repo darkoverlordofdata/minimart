@@ -283,6 +283,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\templates\shopping\index.html" />
+    <Content Include="create.db.sql" />
     <Content Include="favicon.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
@@ -337,7 +338,9 @@
       <LastGenOutput>Minimart.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Catalog\Index.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -369,7 +372,9 @@
     <Content Include="Views\Shopping\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web.template.config" />
+    <None Include="Web.template.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
