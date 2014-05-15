@@ -1,7 +1,4 @@
-﻿--USE minimart;
--- C:\Users\Bruce\AppData\Local\Microsoft\VisualStudio\SSDT
-
--- /*******************************************************
+﻿-- /*******************************************************
 -- *
 -- * Table: Orders
 -- *
@@ -51,6 +48,24 @@ CREATE TABLE items (
 
 GO
 
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = 'AK_items_order')
+	DROP INDEX items.AK_items_order
+	
+GO
+
+CREATE INDEX AK_items_order ON items(order_id);
+
+GO
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = 'AK_items_product')
+	DROP INDEX items.AK_items_product
+	
+GO
+
+CREATE INDEX AK_items_product ON items(product_id);
+
+GO
+
 -- /*******************************************************
 -- *
 -- * Table: Brands
@@ -95,6 +110,16 @@ CREATE TABLE products (
 );
 
 GO
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = 'AK_product_brand')
+	DROP INDEX products.AK_product_brand
+	
+GO
+
+CREATE INDEX AK_product_brand ON products(brand_id);
+
+GO
+
 
 -- /*******************************************************
 -- *
