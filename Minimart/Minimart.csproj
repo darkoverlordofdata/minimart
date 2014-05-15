@@ -276,10 +276,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-Minimart-20140507135402.mdf" />
-    <Content Include="App_Data\aspnet-Minimart-20140507135402_log.ldf">
-      <DependentUpon>aspnet-Minimart-20140507135402.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font.css" />
@@ -354,6 +350,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>

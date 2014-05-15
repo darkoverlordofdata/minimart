@@ -16,13 +16,13 @@ namespace Minimart.Tests.Controllers
         public void Index()
         {
             // Arrange
-            //CatalogController controller = new CatalogController();
+            CatalogController controller = new CatalogController();
 
             // Act
-            //ViewResult result = controller.Index("0", 1) as ViewResult;
+            ViewResult result = controller.Index("0", 1) as ViewResult;
 
             // Assert
-            //Assert.IsNotNull(result);
+            Assert.IsNotNull(result);
         }
 
     }
