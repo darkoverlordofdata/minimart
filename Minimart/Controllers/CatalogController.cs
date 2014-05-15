@@ -31,8 +31,6 @@ namespace Minimart.Controllers
         public ActionResult Index(string id, int? page)
         {
 
-            return View(storeDB.MM_GetProducts(1).ToList().ToPagedList(1, 6));
-
             int brand_id = Convert.ToInt32(id);
 
             if (brand_id > 0)
