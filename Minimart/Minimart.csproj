@@ -303,6 +303,23 @@
     <Content Include="Scripts\js\liquid.coffee.min-0.0.7.js" />
     <Content Include="Scripts\js\shopping\checkout.js" />
     <Content Include="Scripts\js\shopping\index.js" />
+    <EntityDeploy Include="Models\Minimart.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Minimart.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Minimart.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Minimart.edmx</DependentUpon>
+      <LastGenOutput>Minimart.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Minimart.edmx.diagram">
+      <DependentUpon>Minimart.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Minimart.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Minimart.edmx</DependentUpon>
+      <LastGenOutput>Minimart.cs</LastGenOutput>
+    </Content>
     <None Include="Views\Catalog\Index.cshtml" />
     <None Include="Views\Shopping\Checkout.cshtml" />
     <None Include="Views\Shopping\Index.cshtml" />
@@ -339,27 +356,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="Models\Minimart.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Minimart.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Models\Minimart.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Minimart.edmx</DependentUpon>
-      <LastGenOutput>Minimart.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Minimart.edmx.diagram">
-      <DependentUpon>Minimart.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\Minimart.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Minimart.edmx</DependentUpon>
-      <LastGenOutput>Minimart.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />

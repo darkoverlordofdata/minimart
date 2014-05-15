@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Minimart.Models;
 
+
 namespace Minimart.Controllers
 {
     public class HomeController : Controller
@@ -30,7 +31,7 @@ namespace Minimart.Controllers
             ViewBag.MenuHome = "active";
             ViewBag.Confirmation = confirm;
             MM_GetBrand_Result brand = storeDB.MM_GetBrand(1).ElementAt(0);
-            ViewBag.Confirmation = brand.name;
+            ViewBag.Confirmation = "Hello [" + brand.name + "]";
 
 
             return View();
