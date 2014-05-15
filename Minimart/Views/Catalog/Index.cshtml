@@ -1,138 +1,140 @@
 ﻿@using PagedList.Mvc
 @using PagedList
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <ul class="breadcrumb">
-                <li class="active">@ViewBag.BrandName </li>
+<div class='container'>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <ul class='breadcrumb'>
+                <li class='active'>@ViewBag.BrandName</li>
             </ul>
-            <div id="message"></div>
+            <div id='message'></div>
         </div>
     </div>
-    @foreach (var row in @Model)
-    {
-        <div class="col-sm-4">
-            <div class="row">
-                <div>
-                    <a data-toggle="modal" data-target="#product0@row.id ">
-                        <img src='/images/product/@row.image ' class="alignleft img-thumbnail img-product" alt='@row.name ' />
+    @foreach (var row in Model) { 
+    <div class='col-sm-4'>
+        <div class='row'>
 
-                    </a>
-                    <div class="modal fade" id="product0@row.id " tabindex="-1" role="dialog" aria-labelledby="product0Label@row.id " aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h3 class="modal-title" id="product0Label@row.id ">@row.name </h3>
-                                </div>
-                                <div class="modal-body">
-                                    <img src='/images/product/@row.image ' class="alignright img-thumbnail img-detail" alt='@row.name ' />
+            <div>
+                <a data-toggle='modal' data-target='#product_@row.id'>
+                    <img src='/images/product/@row.image' class='alignleft img-thumbnail img-product' alt='@row.name' />
 
-                                    <dl>
-                                        <dt>@row.brand </dt>
-                                        <dd>@row.name , @row.size </dd>
-                                        <dt>Serving</dt>
-                                        <dd>@row.servingsize </dd>
-                                        <dt>Per Container</dt>
-                                        <dd>@row.servings </dd>
-                                        <dt>Ingredients</dt>
-                                        <dd>@row.ingredients </dd>
-                                    </dl>
-                                    <p>Price: $ @row.price </p>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="input-group input-group-sm update-cart">
-                                                <select class="form-control" data-id="@row.id " data-price="@row.price ">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                    <option value="11">11</option>
-                                                    <option value="12">12</option>
-                                                    <option value="13">13</option>
-                                                    <option value="14">14</option>
-                                                    <option value="15">15</option>
-                                                    <option value="16">16</option>
-                                                    <option value="17">17</option>
-                                                    <option value="18">18</option>
-                                                    <option value="19">19</option>
-                                                    <option value="20">20</option>
-                                                    <option value="21">21</option>
-                                                    <option value="22">22</option>
-                                                    <option value="23">23</option>
-                                                    <option value="24">24</option>
-                                                </select>
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
-                                                </span>
+                </a>
+                <div class='modal fade' id='product_@row.id' tabindex='-1' role='dialog' aria-labelledby='productLabel_@row.id' aria-hidden='true'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <div class='modal-header'>
+                                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+                                <h3 class='modal-title' id='productLabel_@row.id'>@row.name</h3>
+                            </div>
+                            <div class='modal-body'>
+                                <img src='/images/product/@row.image' class='alignright img-thumbnail img-detail' alt='@row.name' />
 
-                                            </div>
+                                <dl>
+                                    <dt>@row.brand</dt>
+                                    <dd>@row.name, @row.size</dd>
+                                    <dt>Serving</dt>
+                                    <dd>@row.servingsize</dd>
+                                    <dt>Per Container</dt>
+                                    <dd>@row.servings</dd>
+                                    <dt>Ingredients</dt>
+                                    <dd>@row.ingredients</dd>
+                                </dl>
+                                <p>Price: $ @row.price</p>
+                                <div class='row'>
+                                    <div class='col-sm-6'>
+                                        <div class='input-group input-group-sm update-cart'>
+                                            <select class='form-control' data-id='@row.id' data-price='@row.price'>
+                                                <option value='1'>1</option>
+                                                <option value='2'>2</option>
+                                                <option value='3'>3</option>
+                                                <option value='4'>4</option>
+                                                <option value='5'>5</option>
+                                                <option value='6'>6</option>
+                                                <option value='7'>7</option>
+                                                <option value='8'>8</option>
+                                                <option value='9'>9</option>
+                                                <option value='10'>10</option>
+                                                <option value='11'>11</option>
+                                                <option value='12'>12</option>
+                                                <option value='13'>13</option>
+                                                <option value='14'>14</option>
+                                                <option value='15'>15</option>
+                                                <option value='16'>16</option>
+                                                <option value='17'>17</option>
+                                                <option value='18'>18</option>
+                                                <option value='19'>19</option>
+                                                <option value='20'>20</option>
+                                                <option value='21'>21</option>
+                                                <option value='22'>22</option>
+                                                <option value='23'>23</option>
+                                                <option value='24'>24</option>
+                                            </select>
+                                            <span class='input-group-btn'>
+                                                <button class='btn btn-default' type='submit'><span class='glyphicon glyphicon-shopping-cart'></span>Add to cart</button>
+                                            </span>
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                </div>
+                            </div>
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-primary' data-dismiss='modal'>Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <h5><a data-toggle="modal" data-target="#product@row.id ">@row.name </a></h5>
-                <p>Price: $&nbsp;@row.price </p>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input-group input-group-sm update-cart">
-                            <select class="form-control" data-id="@row.id " data-price="@row.price ">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                            </select>
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit" data-dismiss="modal"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
-                            </span>
+            <h5><a data-toggle='modal' data-target='#product_@row.id'>@row.name</a></h5>
+            <p>Price: $&nbsp;@row.price</p>
+            <div class='row'>
+                <div class='col-sm-6'>
+                    <div class='input-group input-group-sm update-cart'>
+                        <select class='form-control' data-id='@row.id' data-price='@row.price'>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                            <option value='9'>9</option>
+                            <option value='10'>10</option>
+                            <option value='11'>11</option>
+                            <option value='12'>12</option>
+                            <option value='13'>13</option>
+                            <option value='14'>14</option>
+                            <option value='15'>15</option>
+                            <option value='16'>16</option>
+                            <option value='17'>17</option>
+                            <option value='18'>18</option>
+                            <option value='19'>19</option>
+                            <option value='20'>20</option>
+                            <option value='21'>21</option>
+                            <option value='22'>22</option>
+                            <option value='23'>23</option>
+                            <option value='24'>24</option>
+                        </select>
+                        <span class='input-group-btn'>
+                            <button class='btn btn-default' type='submit' data-dismiss='modal'><span class='glyphicon glyphicon-shopping-cart'></span>Add to cart</button>
+                        </span>
 
-                        </div>
                     </div>
                 </div>
-
             </div>
-            <p><hr /></p>
         </div>
+        <p><hr /></p>
+    </div>
+
     }
-    <div class="row">
-        <div class="col-sm-12">
-            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+
+    <div class='row'>
+        <div class='col-sm-12'>
+            @Html.PagedListPager((IPagedList)Model, page => @Url.Action("Index", new { page }) )
         </div>
     </div>
+
 </div>
 
 @section scripts {
