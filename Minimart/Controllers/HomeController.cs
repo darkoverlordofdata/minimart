@@ -30,7 +30,7 @@ namespace Minimart.Controllers
             ViewBag.MenuHome = "active";
             ViewBag.Confirmation = confirm;
             MM_GetBrand_Result brand = storeDB.MM_GetBrand(1).ElementAt(0);
-            ViewBag.BrandName = brand.name;
+            ViewBag.Confirmation = brand.name;
 
 
             return View();
