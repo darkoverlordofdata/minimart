@@ -342,8 +342,8 @@
     </Content>
     <Content Include="Views\Catalog\Index - Copy.cshtml" />
     <Content Include="Views\Catalog\Index.cshtml" />
-    <None Include="Views\Shopping\Checkout.cshtml" />
-    <None Include="Views\Shopping\Index.cshtml" />
+    <Content Include="Views\Shopping\Checkout - Copy.cshtml" />
+    <Content Include="Views\Shopping\Index - Copy.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -367,6 +367,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shopping\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shopping\Checkout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
