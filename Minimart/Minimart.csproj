@@ -276,8 +276,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\bootstrap.unmin.css" />
     <Content Include="Content\css\bootstrap.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -309,15 +309,15 @@
     <Content Include="Images\product\f-726016004251.jpg" />
     <Content Include="Images\product\f-726016004701.jpg" />
     <Content Include="Images\product\f-726016005029.jpg" />
+    <Content Include="Scripts\js\bootstrap-3.1.1.unmin.js" />
     <Content Include="Scripts\js\bootstrap-3.1.1.js" />
-    <Content Include="Scripts\js\bootstrap-3.1.1.min.js" />
     <Content Include="Scripts\js\catalog\index.js" />
+    <Content Include="Scripts\js\jquery-2.1.1.unmin.js" />
     <Content Include="Scripts\js\jquery-2.1.1.js" />
-    <Content Include="Scripts\js\jquery-2.1.1.min.js" />
     <Content Include="Scripts\js\jquery.validate.js" />
     <Content Include="Scripts\js\liquid.coffee-0.0.7.dbg.js" />
+    <Content Include="Scripts\js\liquid.coffee-0.0.7.unmin.js" />
     <Content Include="Scripts\js\liquid.coffee-0.0.7.js" />
-    <Content Include="Scripts\js\liquid.coffee.min-0.0.7.js" />
     <Content Include="Scripts\js\shopping\checkout.js" />
     <Content Include="Scripts\js\shopping\index.js" />
     <EntityDeploy Include="Models\Minimart.edmx">
