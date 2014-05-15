@@ -30,7 +30,7 @@ namespace Minimart
                         "~/Scripts/js/shopping/checkout.js"));
 
             bundles.Add(new StyleBundle("~/css/site").Include(
-                        "~/Content/css/fonts.css",
+                        "~/Content/css/font.css",
                         "~/Content/css/bootstrap.css",
                         "~/Content/css/site.css"));
 

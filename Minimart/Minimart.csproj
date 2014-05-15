@@ -372,6 +372,7 @@
     <Content Include="Views\Shopping\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\fonts\indieflower\v5\10JVD_humAd5zP2yrFqw6nhCUOGz7vYGh680lGh-uXM.woff" />
     <None Include="Web.template.config">
       <SubType>Designer</SubType>
     </None>

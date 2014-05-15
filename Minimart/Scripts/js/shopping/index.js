@@ -41,6 +41,7 @@ $(function () {
                 data[i].extended = (data[i].price * data[i].quantity);
                 total += data[i].extended;
             }
+
             $("#cartTable").html(template.render({ total: total, cart: data }));
 
             $(".update-cart").bind('click', function (e) {
