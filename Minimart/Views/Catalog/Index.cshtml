@@ -1,13 +1,12 @@
-﻿<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <ul class="breadcrumb">
-                <li class="active">@ViewBag.BrandName </li>
-            </ul>
-            <div id="message"></div>
-        </div>
+﻿<div class="jumbotron">
+    <div class="container">
+        <h1 class="melody">go to the Mini-Mart...</h1>
+        @if (ViewBag.Confirmation != "")
+        {
+            <p>Your Order Confirmation is @ViewBag.Confirmation</p>
+        }
+        <hr>
+        <p><a class="btn btn-lg btn-success" href='@Url.Action("Index","Catalog")' role="button">Start Shopping</a></p>
+
     </div>
-
 </div>
-
-

@@ -44,6 +44,7 @@ namespace Minimart.Controllers
                 ViewBag.BrandName = "All Brands";
             }
 
+            ViewBag.Confirmation = ViewBag.BrandName;
             int pageSize = 6;
             int pageNumber = (page ?? 1);
             return View(storeDB.MM_GetProducts(brand_id).ToList().ToPagedList(pageNumber, pageSize));
