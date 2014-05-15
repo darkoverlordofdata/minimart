@@ -292,6 +292,26 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Images\product\3312_2790_large.jpg" />
+    <Content Include="Images\product\819_YogiTeaGreen_L.jpg" />
+    <Content Include="Images\product\821_YogiTeaBedtime_L.jpg" />
+    <Content Include="Images\product\824_YogiTeaDetox_L.jpg" />
+    <Content Include="Images\product\826_YogiTeaGinger_L.jpg" />
+    <Content Include="Images\product\828_YogiTeaPeachDetox_L.jpg" />
+    <Content Include="Images\product\831_YogiTeaEgyptian_L.jpg" />
+    <Content Include="Images\product\ais-283_1.jpg" />
+    <Content Include="Images\product\ais-300b_1.jpg" />
+    <Content Include="Images\product\f-032917000095.jpg" />
+    <Content Include="Images\product\f-032917000132.jpg" />
+    <Content Include="Images\product\f-032917000163.jpg" />
+    <Content Include="Images\product\f-076950450097.jpg" />
+    <Content Include="Images\product\f-076950450103.jpg" />
+    <Content Include="Images\product\f-076950450219.jpg" />
+    <Content Include="Images\product\f-076950450271.jpg" />
+    <Content Include="Images\product\f-076950450417.jpg" />
+    <Content Include="Images\product\f-726016004251.jpg" />
+    <Content Include="Images\product\f-726016004701.jpg" />
+    <Content Include="Images\product\f-726016005029.jpg" />
     <Content Include="Scripts\js\bootstrap-3.1.1.js" />
     <Content Include="Scripts\js\bootstrap-3.1.1.min.js" />
     <Content Include="Scripts\js\catalog\index.js" />
@@ -331,19 +351,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
