@@ -38,7 +38,8 @@ $(function () {
 
             total = 0;
             for (i in data) {
-                total += (data[i].price * data[i].quantity)
+                data[i].extended = (data[i].price * data[i].quantity);
+                total += data[i].extended;
             }
             $("#cartTable").html(template.render({ total: total, cart: data }));
 

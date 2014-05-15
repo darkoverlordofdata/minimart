@@ -16,7 +16,7 @@
             <td>{{ row.size }}</td>
             <td>{{ row.price | decimal }}</td>
             <td>{{ row.quantity }}</td>
-            <td><span class="pull-right">{{ (row.price * quantity)  | decimal }}</span></td>
+            <td><span class="pull-right">{{ row.extended  | decimal }}</span></td>
         </tr>
         {% endfor %}
     </tbody>
