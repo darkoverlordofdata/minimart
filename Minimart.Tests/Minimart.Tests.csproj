@@ -125,10 +125,6 @@
     <Content Include="App.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\aspnet-Minimart-20140507135402.mdf" />
-    <Content Include="App_Data\aspnet-Minimart-20140507135402_log.ldf">
-      <DependentUpon>aspnet-Minimart-20140507135402.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
