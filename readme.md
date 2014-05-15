@@ -10,17 +10,19 @@ set sql connection string.
 
 	for example:
 
-	Server=99999999-8888-7777-6666-555555555555.sqlserver.sequelizer.com;Database=db0123456789;User ID=user;Password=reallylongpassword;
+	Server=sqlserver.sequelizer.com;Database=db0123456789;User ID=user;Password=reallylongpassword;
 
 
-	First
+	copy Minimart\Web.template.config to Minimart\Web.config
 
-		copy Minimart Web.template.config to Web.config
-		copy Minimart.Tests App.template.config to App.config
+	copy Minimart.Tests\App.template.config to Minimart.Tests\App.config
 
-	Then in both config files
+	In both config files, replace the token $CONNECTION_STRING$ with the connection string value.
 
-		replace the token $CONNECTION_STRING$ with the new value.
+	In the Sql Server Explorer window in visual studio, connect to the same server, and open a new query.
+
+	Paste Minimart\create.db.sql into the query window and execute. 
+
 
 
 ## License
