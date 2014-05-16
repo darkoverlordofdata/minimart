@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Minimart.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MinimartEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="MM_DelCart">
+      <Parameter Name="orderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MM_GetBrand" ReturnType="Collection(Minimart.Model.MM_GetBrand_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MM_GetCart" ReturnType="Collection(Minimart.Model.MM_GetCart_Result)">
+      <Parameter Name="orderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MM_GetOrder" ReturnType="Collection(Minimart.Model.MM_GetOrder_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MM_GetProducts" ReturnType="Collection(Minimart.Model.MM_GetProducts_Result)">
+      <Parameter Name="brandId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MM_NewCart" ReturnType="Collection(Decimal)">
+      <Parameter Name="orderIp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MM_ShipTo">
+      <Parameter Name="order_id" Mode="In" Type="Int32" />
+      <Parameter Name="confirmation" Mode="In" Type="String" />
+      <Parameter Name="customer_name" Mode="In" Type="String" />
+      <Parameter Name="customer_email" Mode="In" Type="String" />
+      <Parameter Name="phone_number" Mode="In" Type="String" />
+      <Parameter Name="ship_to_name" Mode="In" Type="String" />
+      <Parameter Name="ship_to_address1" Mode="In" Type="String" />
+      <Parameter Name="ship_to_address2" Mode="In" Type="String" />
+      <Parameter Name="ship_to_city" Mode="In" Type="String" />
+      <Parameter Name="ship_to_country" Mode="In" Type="String" />
+      <Parameter Name="ship_to_state" Mode="In" Type="String" />
+      <Parameter Name="ship_to_zip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MM_Submit">
+      <Parameter Name="order_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MM_UpdateCart">
+      <Parameter Name="orderId" Mode="In" Type="Int32" />
+      <Parameter Name="productId" Mode="In" Type="Int32" />
+      <Parameter Name="price" Mode="In" Type="Decimal" />
+      <Parameter Name="quantity" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="MM_GetBrand_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="MM_GetCart_Result">
+    <Property Type="Int64" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="order_id" Nullable="false" />
+    <Property Type="Int32" Name="product_id" Nullable="false" />
+    <Property Type="String" Name="brand" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="size" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="upc" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="price" Nullable="false" Precision="12" Scale="2" />
+    <Property Type="String" Name="servings" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="servingsize" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ingredients" Nullable="false" MaxLength="1024" />
+    <Property Type="String" Name="image" Nullable="false" MaxLength="255" />
+    <Property Type="Int32" Name="quantity" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="MM_GetOrder_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="order_guid" Nullable="false" MaxLength="36" />
+    <Property Type="String" Name="order_ip" Nullable="false" MaxLength="39" />
+    <Property Type="DateTime" Name="order_date" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="order_status" Nullable="false" />
+    <Property Type="String" Name="customer_name" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="customer_email" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="phone_number" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ship_to_name" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ship_to_address1" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ship_to_address2" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ship_to_city" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ship_to_country" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="ship_to_state" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="ship_to_zip" Nullable="false" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="MM_GetProducts_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="brand" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="size" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="upc" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="price" Nullable="false" Precision="12" Scale="2" />
+    <Property Type="String" Name="ingredients" Nullable="false" MaxLength="1024" />
+    <Property Type="String" Name="servings" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="servingsize" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="image" Nullable="false" MaxLength="255" />
+  </ComplexType>
+</Schema>

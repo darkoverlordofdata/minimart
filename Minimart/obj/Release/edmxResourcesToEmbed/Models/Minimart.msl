@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MinimartModelStoreContainer" CdmEntityContainer="MinimartEntities">
+    <FunctionImportMapping FunctionImportName="MM_DelCart" FunctionName="Minimart.Model.Store.MM_DelCart" />
+    <FunctionImportMapping FunctionImportName="MM_GetBrand" FunctionName="Minimart.Model.Store.MM_GetBrand">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Minimart.Model.MM_GetBrand_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MM_GetCart" FunctionName="Minimart.Model.Store.MM_GetCart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Minimart.Model.MM_GetCart_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="upc" ColumnName="upc" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="servings" ColumnName="servings" />
+          <ScalarProperty Name="servingsize" ColumnName="servingsize" />
+          <ScalarProperty Name="ingredients" ColumnName="ingredients" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MM_GetOrder" FunctionName="Minimart.Model.Store.MM_GetOrder">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Minimart.Model.MM_GetOrder_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="order_guid" ColumnName="order_guid" />
+          <ScalarProperty Name="order_ip" ColumnName="order_ip" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="order_status" ColumnName="order_status" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_email" ColumnName="customer_email" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="ship_to_name" ColumnName="ship_to_name" />
+          <ScalarProperty Name="ship_to_address1" ColumnName="ship_to_address1" />
+          <ScalarProperty Name="ship_to_address2" ColumnName="ship_to_address2" />
+          <ScalarProperty Name="ship_to_city" ColumnName="ship_to_city" />
+          <ScalarProperty Name="ship_to_country" ColumnName="ship_to_country" />
+          <ScalarProperty Name="ship_to_state" ColumnName="ship_to_state" />
+          <ScalarProperty Name="ship_to_zip" ColumnName="ship_to_zip" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MM_GetProducts" FunctionName="Minimart.Model.Store.MM_GetProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Minimart.Model.MM_GetProducts_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="upc" ColumnName="upc" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="ingredients" ColumnName="ingredients" />
+          <ScalarProperty Name="servings" ColumnName="servings" />
+          <ScalarProperty Name="servingsize" ColumnName="servingsize" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MM_NewCart" FunctionName="Minimart.Model.Store.MM_NewCart" />
+    <FunctionImportMapping FunctionImportName="MM_ShipTo" FunctionName="Minimart.Model.Store.MM_ShipTo" />
+    <FunctionImportMapping FunctionImportName="MM_Submit" FunctionName="Minimart.Model.Store.MM_Submit" />
+    <FunctionImportMapping FunctionImportName="MM_UpdateCart" FunctionName="Minimart.Model.Store.MM_UpdateCart" />
+  </EntityContainerMapping>
+</Mapping>

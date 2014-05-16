@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Minimart.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <Function Name="MM_DelCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MM_GetBrand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MM_GetCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MM_GetOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MM_GetProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="brandId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MM_NewCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderIp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="MM_ShipTo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+    <Parameter Name="confirmation" Type="varchar" Mode="In" />
+    <Parameter Name="customer_name" Type="varchar" Mode="In" />
+    <Parameter Name="customer_email" Type="varchar" Mode="In" />
+    <Parameter Name="phone_number" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_name" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_address1" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_address2" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_city" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_country" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_state" Type="varchar" Mode="In" />
+    <Parameter Name="ship_to_zip" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="MM_Submit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="order_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MM_UpdateCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="orderId" Type="int" Mode="In" />
+    <Parameter Name="productId" Type="int" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="quantity" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="MinimartModelStoreContainer" />
+</Schema>

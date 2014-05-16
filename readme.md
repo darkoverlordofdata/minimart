@@ -4,24 +4,33 @@ A web site and relational database to support a simple shopping cart system.
 
 ## Install
 
-git clone git@github.com:darkoverlordofdata/minimart.git
+Unzip the attached file or 
 
-set sql connection string.
-
-	for example:
-
-	Server=sqlserver.sequelizer.com;Database=db0123456789;User ID=user;Password=reallylongpassword;
+    git clone git@github.com:darkoverlordofdata/minimart.git
 
 
-	copy Minimart\Web.template.config to Minimart\Web.config
+*First*, you'll need to set up the Sql database. In Sql Server Mgmt Studio or in the Sql Server Explorer window in visual studio, connect to your sql server, and create a new database - the name doesn't matter, just note it for later. Open a new query window, paste the contents of minimart\Minimart\create.db.sql into the query window and select execute. 
 
-	copy Minimart.Tests\App.template.config to Minimart.Tests\App.config
+Using the database name from above, construct your sql connection string. .
 
-	In both config files, replace the token $CONNECTION_STRING$ with the connection string value.
+* As an example, PaaS generally uses a connection string formatted like this:
 
-	In the Sql Server Explorer window in visual studio, connect to the same server, and open a new query.
+    Server=myServerAddress;Database=myDataBase;User ID=nyUserName;Password=myPassword;
 
-	Paste Minimart\create.db.sql into the query window and execute. 
+* If you are using integrated security, use a connection string formatted like this:
+
+    Driver={SQL Server Native Client 11.0};Server=myServerAddress; Database=myDataBase;Trusted_Connection=yes;
+
+*Next*, set the application to use this Sql connection:
+* copy minimart\Minimart\Web.template.config to minimart\Minimart\Web.config
+* copy minimart\Minimart.Tests\App.template.config to minimart\Minimart.Tests\App.config
+* In both config files, replace the token $CONNECTION_STRING$ with the new connection string value.
+
+*Last*, deploy to IIS:
+* In VS, right click on the Minimart project.
+* Select Publish...
+* Enter or select the appropriate connection settings for your environment
+* Click Publish
 
 
 
